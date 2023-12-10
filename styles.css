@@ -59,7 +59,22 @@ button:active{
 }
 
 .dog-picture img {
-    width: 21%;
+    width:30%;
     border: 0.25rem solid rgba(0, 0, 0, 0.1);
     border-radius: 50% !important;
+}
+
+ #imageContainer {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#imageSlider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
 }

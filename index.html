@@ -11,9 +11,43 @@
     
     <div class = "container padding">
         <h1> Suki Snoring Loops</h1>
-        <div class ="dog-picture">
-        <img src = "assets/IMG_5424.jpg">
-    </div>
+        
+        
+        <div id="imageContainer">
+            <div id="imageSlider">
+                <div class="slide dog-picture"><img src="assets/IMG_5424.jpg" alt="Image 1"></div>
+                <div class="slide dog-picture"><img src="assets/grass.jpg" alt="Image 2"></div>
+                <div class="slide dog-picture"><img src="assets/IMG_0713.jpg" alt="Image 3"></div>
+                <div class="slide dog-picture"><img src="assets/IMG_1105.jpg" alt="Image 4"></div>
+                <div class="slide dog-picture"><img src="assets/IMG_4993.jpg" alt="Image 5"></div>
+                
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const imageSlider = document.getElementById('imageSlider');
+
+                function nextSlide() {
+                    // Shift the first slide to the end
+                    const clone = imageSlider.firstElementChild.cloneNode(true);
+                    imageSlider.appendChild(clone);
+
+                    // After a short delay, remove the first slide
+                    setTimeout(() => {
+                        imageSlider.removeChild(imageSlider.firstElementChild);
+                        imageSlider.style.transition = 'none';
+                        imageSlider.style.transform = 'translateX(0)';
+                        setTimeout(() => {
+                            imageSlider.style.transition = 'transform 0.5s ease-in-out';
+                        });
+                    }, 500);
+                }
+
+                // Call nextSlide every 3 seconds (adjust as needed)
+                setInterval(nextSlide, 15000);
+            });
+        </script>
+        
         <p class = "instructions">Press either of the following buttons to get a continuous loop of Suki's snoring sounds</p>
 
         <button id="snore1">Play Snoring Sound 1</button>
@@ -28,16 +62,11 @@
     
     <script>
             
-            
         let play = document.getElementById("snore1");
         let audio = document.getElementById("audio1");
         let play2 = document.getElementById("snore2");
         let audio2 = document.getElementById("audio2");
         
-        
-            
-            
-            
         function hideButton(button) {
             button.style.display = 'none';
         }
@@ -46,8 +75,6 @@
             button.style.display = 'inline-block';
         }
 
-        
-        
         function playsnore1() {
             if(audio.paused) {
                 audio.play()
@@ -82,7 +109,6 @@
         }
         play2.addEventListener("click",playsnore2)
         
-
     </script>
     
 </body>
