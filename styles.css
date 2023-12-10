@@ -49,7 +49,7 @@ button:active{
     padding-right: 60px;
     padding-bottom: 30px;
     padding-top:40px;
-    margin-top: auto;
+    margin-top: 40px;
     margin-bottom: auto;
     margin-right: auto;
     margin-left: auto;
@@ -59,8 +59,7 @@ button:active{
 }
 
 .dog-picture img {
-    width: 20rem;
-    height: ;
+    width: 21%;
     border: 0.25rem solid rgba(0, 0, 0, 0.1);
     border-radius: 50% !important;
 }
