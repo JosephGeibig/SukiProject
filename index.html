@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type = "text/css"></style>
+    <link href="styles.css" rel="stylesheet">
+    <title>Suki Snoring</title>
+</head>
+<body>
+    
+    <div class = "container padding">
+        <h1> Suki Snoring Loops</h1>
+        <div class ="dog-picture">
+        <img src = "assets/IMG_5424.jpg">
+    </div>
+        <p class = "instructions">Press either of the following buttons to get a continuous loop of Suki's snoring sounds</p>
+
+        <button id="snore1">Play Snoring Sound 1</button>
+        <audio id="audio1" src="assets/snoring1.mp3"></audio>
+
+
+
+        <button id="snore2">Play Snoring Sound 2</button>
+        <audio id="audio2" src="assets/snoring2.mp3"></audio>
+    
+    </div>
+    
+    <script>
+            
+            
+        let play = document.getElementById("snore1");
+        let audio = document.getElementById("audio1");
+        let play2 = document.getElementById("snore2");
+        let audio2 = document.getElementById("audio2");
+        
+        
+            
+            
+            
+        function hideButton(button) {
+            button.style.display = 'none';
+        }
+
+        function showButton(button) {
+            button.style.display = 'inline-block';
+        }
+
+        
+        
+        function playsnore1() {
+            if(audio.paused) {
+                audio.play()
+                audio.loop = true;
+                play.textContent = "Pause Snoring Sound 1"
+                hideButton(play2)
+            } else {
+                audio.pause()
+                audio.loop = false;
+                play.textContent = "Play Snoring Sound 1"
+                showButton(play2)
+            }
+        }
+        play.addEventListener("click",playsnore1)
+        
+        
+        function playsnore2() {
+            
+            
+            if(audio2.paused) {
+                audio2.play()
+                audio2.loop = true;
+                play2.textContent = "Pause Snoring Sound 2"
+                hideButton(play)
+                
+            } else {
+                audio2.pause()
+                audio2.loop = false;
+                play2.textContent = "Play Snoring Sound 2"
+                showButton(play)
+            }
+        }
+        play2.addEventListener("click",playsnore2)
+        
+
+    </script>
+    
+</body>
+</html>

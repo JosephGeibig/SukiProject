@@ -1,0 +1,66 @@
+body{
+    background: #404246;
+}
+
+h1{
+    font-size: 38px;
+    color: white;
+}
+
+p{
+    font-size: 20px;
+    color: white;
+}
+
+button{
+    display: inline-flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    background: #00274C;
+    border-width: 3px;
+    border-color: black;
+    outline: none;
+    overflow: hidden;
+    font-size: 34px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #FFCB05;
+    color: black;
+}
+button:active{
+    background: #FFCB05;
+    color: black;
+}
+.button__text{
+    display: inline-flex;
+    align-items: ceneter;
+    padding: 0 24px;
+    color: #ffffff
+}
+
+ .container {
+    background-color: #322E2D;
+    width: 90%;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    padding-top:40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    border: 10pxl;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.dog-picture img {
+    width: 20rem;
+    height: ;
+    border: 0.25rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 50% !important;
+}
